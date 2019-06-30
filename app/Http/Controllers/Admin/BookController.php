@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Author;
 use App\Book;
+use App\Genre;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -22,21 +24,25 @@ class BookController extends Controller
      */
     public function create()
     {
+        $authors = Author::all();
+        $genres = Genre::where('parent_id', '!=', null)->orderBy('name')->get();
 
-        return view('admin.books.create');
+        return view('admin.books.create', compact('authors', 'genres'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $data = $request->except('_token');
 
-        Book::create($data);
+        $book = Book::create($data);
+
+        $book->addMediaFromRequest('photo')->toMediaCollection('images');
 
         return redirect(route('books.index'));
     }
@@ -44,7 +50,7 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -55,7 +61,7 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -66,8 +72,8 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -78,7 +84,7 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

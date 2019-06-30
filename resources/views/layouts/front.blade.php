@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
@@ -20,12 +20,12 @@
     </div>
     <menu>
         <ul>
-            <li><a href="{{ route('front.home') }}" class="link-now">Главная</a></li>
+            <li><a href="{{ route('front.index') }}" class="link-now">Главная</a></li>
             <li><a href="{{ route('front.about') }}">О нас</a></li>
-            <li><a href="#">Книги</a></li>
-            <li><a href="#">События</a></li>
-            <li><a href="#">Бронирование</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="{{ route('front.books') }}">Книги</a></li>
+            <li><a href="{{ route('front.events') }}">События</a></li>
+            <li><a href="{{ route('front.bookings') }}">Бронирование</a></li>
+            <li><a href="{{ route('front.contacts') }}">Контакты</a></li>
         </ul>
     </menu>
 </header>
@@ -53,28 +53,7 @@
     <a href="#up"> <i class="fas fa-chevron-up"></i></a>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".arrow-up").on("click", "a", goUp);
-        $(".menu").on("click", "a", goUp);
-    });
-
-    function goUp(event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
-
-        //забираем идентификатор бока с атрибута href
-        var id = $(this).attr('href'),
-
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top;
-
-        //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({scrollTop: top}, 1500);
-    }
-
-</script>
-
+<script src="/js/script.js"></script>
 
 </body>
 </html>

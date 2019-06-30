@@ -1,17 +1,18 @@
 @extends('layouts.admin')
 
 @section('content')
-    Create author
+    <div class="list">Создать автора:</div>
     <form action="{{ route('authors.store') }}" method="post">
         {{ csrf_field() }}
-        <label for="name">
-            <input type="text" id="name" name="name">
-        </label>
-
-        <label for="surname">
-            <input type="text" id="surname" name="surname">
-        </label>
-
-        <button>Create author</button>
+        <div class="input-group">
+            <div class="input-group-prepend mt-3">
+                <span class="input-group-text">Имя и Фамилия</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control  mt-3" name="name" >
+            <input type="text" aria-label="Last name" class="form-control mt-3"  name="surname">
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn btn-success mt-3">Создать</button>
+        </div>
     </form>
 @endsection

@@ -3,302 +3,532 @@
 @-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
 @keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
 body{
-	margin: 0;
+    margin: 0;
 
 }
 /*стрелочка*/
 .content{
-	-webkit-animation: fade-in 1s linear; /* Safari 4+ */
- 	-moz-animation: fade-in 1s linear; /* Fx 5+ */
- 	-o-animation: fade-in 1s linear; /* Opera 12+ */
- 	animation: fade-in 1s linear; /* IE 10+, Fx 29+ */
+    -webkit-animation: fade-in 1s linear; /* Safari 4+ */
+    -moz-animation: fade-in 1s linear; /* Fx 5+ */
+    -o-animation: fade-in 1s linear; /* Opera 12+ */
+    animation: fade-in 1s linear; /* IE 10+, Fx 29+ */
 }
 .arrow-up {
-	position: fixed;
-	display: inline-block;
-	z-index: 10;
-	right: 50px;
-	bottom: 50px;
+    position: fixed;
+    display: inline-block;
+    z-index: 10;
+    right: 50px;
+    bottom: 50px;
 }
 .fa-chevron-up{
-	font-size: 24px;
-	color: white;
-	padding:10px;
-	background-color:#555555;
-	
-	opacity: 0.5;
+    font-size: 24px;
+    color: white;
+    padding:10px;
+    background-color:#555555;
+
+    opacity: 0.5;
 }
 .fa-chevron-up:hover{
-	opacity: 1;
+    opacity: 1;
 }
 /*headder*/
 header{
-	
+
 }
 .name-library{
-	position:relative; 
-	width: 510px;
-	margin: 0 auto;
+    position:relative;
+    width: 510px;
+    margin: 0 auto;
 }
 .logo img{
-	height: 70px;
-	width: 70px;
+    height: 70px;
+    width: 70px;
 }
 .logo{
-	position: absolute;
-	left: 50px;
+    position: absolute;
+    left: 50px;
     top: -30px;
 }
 /*меню*/
 menu{
-	width: 700px;
-	margin: 0 auto;
-	font-size: 18px;
-	font-family: 'Questrial', sans-serif;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
     margin-bottom: 50px;
 }
 menu ul{
-	margin:30px;
-	padding:0px;
+    margin:30px;
+    padding:0px;
 }
 menu li a{
-	text-decoration: none;
-	color: #1A1A1A;
+    text-decoration: none;
+    color: #1A1A1A;
 }
 menu li a:hover{
-	color: #A9ADA6;
+    color: #A9ADA6;
 }
 .link-now{
-	color: #A9ADA6;
+    color: #A9ADA6;
 }
 menu li{
-	display: inline;
-	padding-right: 30px;
+    display: inline;
+    padding-right: 30px;
 }
 h1{
-	text-align: center;
-	font-size: 20px;
-	width: 310px;
-	margin: 0 auto ;
-	margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    width: 310px;
+    margin: 0 auto ;
+    margin-top: 30px;
 }
 /*Главная*/
 .main-box{
-	height: 860px;
+    height: 860px;
 }
 .box1{
-	height: 100%;
-	width: 50%;
-	float: left;
-	background-color: #E6E9E6;
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-color: #E6E9E6;
 }
 .box2{
-	width: 50%;
-	float: right;
-	height: 100%;
+    width: 50%;
+    float: right;
+    height: 100%;
 }
 .name-box1{
-	width: 455px;
-	height: 130px;
-	font-size: 62px;
-	font-family: 'Noticia Text', serif;
+    width: 455px;
+    height: 130px;
+    font-size: 62px;
+    font-family: 'Noticia Text', serif;
 }
 .text-box1{
-	width: 355px;
-	height: 130px;
-	font-size: 20px;
-	font-family: 'Questrial', sans-serif;
+    width: 355px;
+    height: 130px;
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
 }
 .container-box1{
-	width: 500px;
-	margin: 0 auto;
-	margin-top: 220px
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 220px
 }
 .container-box2 {
-	width: 305px;
-	margin: 0 auto;
-	margin-top: 220px
+    width: 305px;
+    margin: 0 auto;
+    margin-top: 220px
 }
 .container-box2 img{
-	width: 302px;
-	height: 392px;
+    width: 302px;
+    height: 392px;
 }
 .name-lokov-box2{
-	margin: 0;
-	text-align: center;
-	font-size: 16px;
-	font-family: 'Questrial', sans-serif;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
 }
 .painting-lokov{
-	font-family: 'Mr De Haviland', cursive;
-	font-size: 40px;
-	transform: rotate(347deg);
-	width: 80px;
-	height: 53px;
-	margin: 0px;
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 40px;
+    transform: rotate(347deg);
+    width: 80px;
+    height: 53px;
+    margin: 0px;
     float: right;
+}
+/*week*/
+.name-week{
+    font-size: 43px;
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    margin: 100px;
+}
+.conteiner-week{
+    width: 80%;
+    margin: 0 auto;
+}
+.book1-week{
+    width: 50%;
+    float: left;
+}
+.book2-week{
+    width: 49%;
+    float: left;
+    margin-top: 180px;
+}
+.blok-book-two{
+    height: 930px;
+}
+.box-book-week{
+    width: 340px;
+    margin: 0 auto;
+}
+.img-book{
+    width: 350px;
+    height: 540px;
+    box-shadow: -1.8em 0.9em 42px rgba(122,122,122,0.5);
+}
+.name-book{
+    text-align: center;
+    font-size: 22px;
+    color: #1A1A1A;
+    margin-top: 35px;
+    font-family: 'Noticia Text', serif;
+}
+.line-book-name{
+    width: 23px;
+    height: 3px;
+    background-color: #1A1A1A;
+    border: none;
+    margin-bottom: 20px;
+}
+.button-book-week{
+    width: 125px;
+    margin: 0 auto;
+}
+.button-book-week a{
+    font-size: 20px;
+    color: #1A1A1A;
+    font-family: 'Questrial', sans-serif;
+    text-decoration: none;
+}
+.button-book-week a:hover{
+    color: #ed4f1a;
+}
+.blok-book-one{
+    height: 800px;
+}
+.book2-week p{
+    font-size: 20px;
+    font-family: 'Noticia Text', serif;
+    color: #1A1A1A;
+    font-weight: 700;
+    font-style: italic;
+    width: 400px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.link-book-more{
+    color: #ed4f1a;
+    margin-top: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    text-decoration:underline;
 }
 /*правилв бронирования*/
 .conteiner-regulations{
-	background-color: #E6E9E6;
-	height: 640px;
+    background-color: #E6E9E6;
+    height: 590px;
+    padding-top: 40px;
 }
 .conteiner-regulations .name-regulations{
-	font-size: 43px;
-	font-family: 'Noticia Text', serif;
-	height: 60px;
-	width: 431px;
-	margin: 0 auto;
+    font-size: 43px;
+    font-family: 'Noticia Text', serif;
+    height: 60px;
+    width: 431px;
+    margin: 0 auto;
 }
 .regulations-box1{
-	width:33%;
-	height: 500px;
-	float: left;
+    width:33%;
+    height: 500px;
+    float: left;
 }
 .regulations-box2{
-	width:34%;
-	height: 500px;
-	float: left;
+    width:34%;
+    height: 500px;
+    float: left;
 }
 .regulations-box3{
-	width:33%;
-	height: 500px;
-	float: left;
+    width:33%;
+    height: 500px;
+    float: left;
 
 }
 .regulations-box p{
-	width: 293px;
-	text-align: center;
-	font-size: 22px;
-	font-family: 'Questrial', sans-serif;
-	margin-top: 160px;
-	margin-bottom: 22px;
+    width: 293px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Questrial', sans-serif;
+    margin-top: 160px;
+    margin-bottom: 22px;
 }
 .regulations-line1{
-	width: 16px;
-	height:5px;
-	background-color: black; 
-	border: none;
+    width: 16px;
+    height:5px;
+    background-color: black;
+    border: none;
 }
 .regulations-line2{
-	width: 16px;
-	height:5px;
-	background-color: black; 
-	border: none;
+    width: 16px;
+    height:5px;
+    background-color: black;
+    border: none;
 }
 .regulations-line3{
-	width: 16px;
-	height:5px;
-	background-color: black; 
-	border: none;
+    width: 16px;
+    height:5px;
+    background-color: black;
+    border: none;
 }
 .regulations-text-line-1{
-	width: 295px;
-	float: right;
+    width: 295px;
+    float: right;
 }
 .regulations-text-line-2{
-	width: 295px;
-	margin: 0 auto;
+    width: 295px;
+    margin: 0 auto;
 }
 .regulations-text-line-3{
-	width: 295px;
-	float: left;
+    width: 295px;
+    float: left;
 }
 
 /*о нас*/
 .name-about{
-	font-size: 50px;
-	font-family: 'Noticia Text', serif;
-	text-align: center;
-	margin-top: 0;
+    font-size: 50px;
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    margin-top: 0;
 }
 .contaiher-about{
-	width: 70%;
-	margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
 }
 .lokov-img img{
-	width: 423px;
-	height: 565px;
+    width: 423px;
+    height: 565px;
 }
 .lokov-img{
-	width: 50%;
-	float: left;
-	margin-bottom: 70px;
+    width: 50%;
+    float: left;
+    margin-bottom: 70px;
 }
 .content-about{
-	width: 50%;
-	float: left;
+    width: 50%;
+    float: left;
 }
 .name-text-about{
-	width: 400px;
-	font-size: 21px;
-	font-family: 'Noticia Text', serif;
-	font-weight: 600;
-	font-style: italic;	
+    width: 400px;
+    font-size: 21px;
+    font-family: 'Noticia Text', serif;
+    font-weight: 600;
+    font-style: italic;
 }
 .text-about{
-	width: 350px;
-	font-size: 17px;
-	font-family: 'Questrial', sans-serif;
+    width: 350px;
+    font-size: 17px;
+    font-family: 'Questrial', sans-serif;
 }
 .line-about{
-	width: 22px;
-	height:5px;
-	background-color: black; 
-	border: none;
+    width: 22px;
+    height:5px;
+    background-color: black;
+    border: none;
 }
 .clear{
-	clear: both;
+    clear: both;
 }
 .content-about .painting-lokov{
-	margin-right: 140px; 
+    margin-right: 140px;
+}
+/*event*/
+.event-content{
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0px 100px 0px;
+}
+.blok-event{
+    height: 450px;
+}
+.left-event .blok-img-event{
+    float: right;
+}
+.blok-img-event{
+    width: 50%;
+    height: 450px;
+    overflow:hidden;
+    float: left;
+}
+.img-event{
+    width: 100%;
+    height: 450px;
+}
+.blok-img-event img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.img-event:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.box-text-event{
+    width: 50%;
+    float: right;
+    padding-top: 10%;
+}
+.date-event{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    padding-bottom: 20px;
+    color: #1A1A1A;
+}
+.name-event{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Noticia Text', serif;
+    font-weight: 700;
+}
+.share-event{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}
+.social-network-event{
+    text-align: center;
+}
+.fab{
+    font-size: 25px;
+    padding: 8px;
+}
+/*contact*/
+.box-contact-agent{
+    width: 50%;
+    margin: 0 auto;
+}
+.blok-agent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 200px;
+    margin-bottom:100px;
+}
+.blok-agent-border{
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
+}
+.blok-agent hr{
+    width: 12px;
+    height:4px;
+    background-color: black;
+    border: none;
+}
+.blok-agent h3{
+    font-size: 20px;
+    font-family: 'Noticia Text', serif;
+}
+.blok-agent p{
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}
+/*коментарий*/
+.forma-contact{
+    width: 80%;
+    margin: 0 auto;
+}
+.chek-in{
+    width: 46%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 3px;
+    margin: 5px;
+    color:  #E6E9E6;
+    font-style: italic;
+    font-family: 'Noticia Text', serif;
+    font-size: 16px;
+}
+.chek-in:hover{
+    border-bottom: 3px solid black;
+}
+.forma-contact h2{
+    text-align: center;
+    margin: 70px;
+}
+.coment{
+    width: 99%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 3px;
+    margin: 5px;
+    color:  #E6E9E6;
+    font-style: italic;
+    font-family: 'Noticia Text', serif;
+    font-size: 16px;
+}
+.coment:hover{
+    border-bottom: 3px solid black;
+}
+.coment-bottom{
+    border: none;
+    color: #ed4f1a;
+    background-color: transparent;
+    font-size: 22px;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 100px;
 }
 /*footer*/
 .box1-footer{
-	width:33%;
-	height: 300px;
-	float: left;
+    width:33%;
+    height: 250px;
+    float: left;
 }
 .box2-footer{
-	width:34%;
-	height: 300px;
-	float: left;
+    width:34%;
+    height:250px;
+    float: left;
+    text-align: center;
 }
 .box3-footer{
-	width:33%;
-	height: 300px;
-	float: left;
+    width:33%;
+    height: 250px;
+    float: left;
+}
+.box2-footer .fab{
+    color: white;
+    margin-top:20px;
 }
 .text-footer{
-	width: 300px;
-	font-size: 18px;
-	font-family: 'Noticia Text', serif;
-	color: white;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 50px;
+    width: 300px;
+    font-size: 18px;
+    font-family: 'Noticia Text', serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 .contact-footer{
-	width: 300px;
-	font-size: 14px;
-	font-family: 'Questrial', sans-serif;
-	color: white;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 30px;
+    width: 300px;
+    font-size: 14px;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 .line-footer{
-	color: white;
-	width: 1300px;
+    color: white;
+    width: 1300px;
 }
 .deta-create{
-	color: white;
-	text-align: center;
-	font-size: 16px;
-	font-family: 'Questrial', sans-serif;
-	margin:0;
-	padding:5px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
+    margin:0;
+    padding:5px;
 }
 footer{
-	background-color: #1A1A1A;
+    background-color: #1A1A1A;
 }

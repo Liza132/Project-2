@@ -1,12 +1,23 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="">Authors list:</div>
-    <div class="authors">
+    <div class="list">Автор лист:</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+        </tr>
+        </thead>
+        <tbody>
         @foreach($authors as $author)
-            <div class="author">
-                <div class="name">{{ $author->name }} {{ $author->surname }}</div>
-            </div>
+            <tr>
+                <th scope="row">{{ $author->id }}</th>
+                <td>{{ $author->name }}</td>
+                <td>{{ $author->surname }}</td>
+            </tr>
         @endforeach
-    </div>
+        </tbody>
+    </table>
 @endsection

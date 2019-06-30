@@ -1,13 +1,31 @@
 @extends('layouts.admin')
 
 @section('content')
-    Create genre
+    <div class="list">Создать жанр:</div>
     <form action="{{ route('genres.store') }}" method="post">
         {{ csrf_field() }}
-        <label for="name">
-            <input type="text" id="name" name="name">
-        </label>
+        <div class="input-group">
+            <div class="input-group-prepend mt-3">
+                <span class="input-group-text">Жанр</span>
+            </div>
+            <input type="text" id="name" aria-label="First name" class="form-control col-md-4  mt-3" name="name">
 
-        <button>Create genre</button>
+
+            <div class="input-group">
+                <div class="input-group-prepend mt-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Под жанр</label>
+                </div>
+                <select class="custom-select col-md-4 mt-3" id="inputGroupSelect01">
+                    @foreach($genres as $id => $name)
+                    <option selected>-</option>
+                    <option value="{{ $id }}">{{ $name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn btn-success mt-3">Создать</button>
+        </div>
     </form>
 @endsection

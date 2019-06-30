@@ -1,0 +1,25 @@
+.box-name-admin{
+    margin-top: 60px;
+}
+.container-admin-menu ul{
+    list-style-type: none;
+}
+.li-menu-admin a{
+    text-decoration: none;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}
+.li-menu-admin {
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid #1A1A1A;
+}
+.li-menu-admin:hover{
+    opacity: 0.5;
+}
+.list{
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}

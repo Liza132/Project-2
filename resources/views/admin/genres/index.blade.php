@@ -1,12 +1,31 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="">Genres list:</div>
-    <div class="genres">
+    <div class="list">Жанр лист:</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Жанр</th>
+            <th scope="col">Под жанр</th>
+        </tr>
+        </thead>
+        <tbody>
         @foreach($genres as $genre)
-            <div class="genre">
-                <div class="name">{{ $genre->name }}</div>
-            </div>
+            <tr>
+                <td scope="row">{{ $genre->id }}</td>
+                <td>{{ $genre->name }}</td>
+                <td>
+                @if($genre->children)
+                    <ul>
+                    @foreach($genre->children as $subGenre)
+                        <li>- {{ $subGenre->name }}</li>
+                    @endforeach
+                    </ul>
+                @endif
+                </td>
+            </tr>
         @endforeach
-    </div>
+        </tbody>
+    </table>
 @endsection

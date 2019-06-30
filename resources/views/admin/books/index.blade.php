@@ -1,12 +1,24 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="">Books list:</div>
-    <div class="books">
+    <div class="list">Книга лист:</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Название</th>
+            <th scope="col">Обложка</th>
+        </tr>
+        </thead>
+        <tbody>
         @foreach($books as $book)
-            <div class="book">
-                <div class="name">{{ $book->name }} {{ $book->surname }}</div>
-            </div>
+            <tr>
+                <th scope="row">{{ $book->id }}</th>
+                <td>{{ $book->name }} {{ $book->surname }}</td>
+                <td><img class="photo" src="{{ $book->getFirstMediaUrl('images', 'thumb') }}"></td>
+            </tr>
         @endforeach
-    </div>
+        </tbody>
+    </table>
+
 @endsection

@@ -15,7 +15,7 @@ class GenreController extends Controller
      */
     public function index()
     {
-        $genres = Genre::all();
+        $genres = Genre::with('children')->where('parent_id', null)->get();
 
         return view('admin.genres.index', compact('genres'));
     }
@@ -27,8 +27,9 @@ class GenreController extends Controller
      */
     public function create()
     {
+        $genres = Genre::pluck('name', 'id')->where('parent_id', null)->toArray();
 
-        return view('admin.genres.create');
+        return view('admin.genres.create', compact('genres'));
     }
 
     /**

@@ -1,23 +1,52 @@
 @extends('layouts.admin')
 
 @section('content')
-    Create author
-    <form action="{{ route('authors.store') }}" method="post">
+    Add book
+    <form action="{{ route('books.store') }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <label for="name">
-            <input type="text" id="name" name="name">
-        </label>
-        <label for="genre">Genre</label>
-        <select name="genre_id" id="genre">
-            @foreach($genres as $genre)
-                <option value="{{ $genre->id }}">{{ $genre->name }}</option>
-            @endforeach
-        </select>
+        <div class="input-group-prepend">
+            <span class="input-group-text  mt-3">Название</span>
+            <input type="text" id="name" aria-label="First name" class="form-control col-md-4  mt-3" name="name">
+        </div>
 
-        <label for="surname">
-            <input type="text" id="surname" name="surname">
-        </label>
 
-        <button>Create author</button>
+        <div class="form-group  mt-3">
+            <label for="photo">Photo
+                <input type="file" id="photo" name="photo">
+            </label>
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text  mt-3">Год издания</span>
+            <input type="number"  id="year" aria-label="First name" class="form-control col-md-4  mt-3" name="year">
+        </div>
+
+        <div class="mt-3">
+            <label for="validationTextarea">Описание книги</label>
+            <textarea class="form-control" id="validationTextarea" name="description" required></textarea>
+        </div>
+
+        <div class="input-group-prepend mt-3">
+            <label class="input-group-text mt-3" for="inputGroupSelect01">Автор</label>
+            <select name="author_id" class="custom-select col-md-4 mt-3" id="inputGroupSelect01">
+                @foreach($authors as $author)
+                    <option value="{{ $author->id }}">{{ $author->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="input-group-prepend mt-3">
+            <label class="input-group-text mt-3" for="inputGroupSelect01">Жанр</label>
+            <select name="genre_id" class="custom-select col-md-4 mt-3" id="inputGroupSelect01">
+                @foreach($genres as $genre)
+                    <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+
+        <div class="input-group">
+            <button type="submit" class="btn btn-success mt-3">Создать</button>
+        </div>
     </form>
 @endsection

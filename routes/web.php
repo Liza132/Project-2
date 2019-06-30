@@ -11,14 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', 'HomeController@index')->name('front.home');
-
-Route::get('/about', 'AboutController@index')->name('front.about');
+Route::get('/', 'PageController@index')->name('front.index');
+Route::get('/about', 'PageController@about')->name('front.about');
+Route::get('/contacts', 'PageController@contacts')->name('front.contacts');
+Route::get('/events', 'PageController@events')->name('front.events');
+Route::get('/bookings', 'PageController@bookings')->name('front.bookings');
+Route::get('/books', 'BookController@index')->name('front.books');
 
 Route::get('/admin', 'Admin\HomeController@index')->name('admin.home');
 Route::resource('/admin/books', 'Admin\BookController');
+Route::resource('/admin/genres', 'Admin\GenreController');
 Route::resource('/admin/authors', 'Admin\AuthorController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
