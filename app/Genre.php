@@ -17,4 +17,9 @@ class Genre extends Model
     public function children() {
         return $this->hasMany(Genre::class, 'parent_id');
     }
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }

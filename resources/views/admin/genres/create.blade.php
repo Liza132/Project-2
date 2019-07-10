@@ -15,9 +15,9 @@
                 <div class="input-group-prepend mt-3">
                     <label class="input-group-text" for="inputGroupSelect01">Под жанр</label>
                 </div>
-                <select class="custom-select col-md-4 mt-3" id="inputGroupSelect01">
+                <select class="custom-select col-md-4 mt-3" name="parent_id" id="inputGroupSelect01">
                     @foreach($genres as $id => $name)
-                    <option selected>-</option>
+                    <option selected></option>
                     <option value="{{ $id }}">{{ $name }}</option>
                     @endforeach
                 </select>

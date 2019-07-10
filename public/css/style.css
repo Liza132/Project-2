@@ -51,9 +51,9 @@ header{
 }
 /*меню*/
 menu{
-    width: 700px;
+    width: 617px;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Questrial', sans-serif;
     margin-bottom: 50px;
 }
@@ -157,9 +157,10 @@ h1{
     width: 49%;
     float: left;
     margin-top: 180px;
+    margin-bottom: 100px;
 }
 .blok-book-two{
-    height: 930px;
+    height: 1800px;
 }
 .box-book-week{
     width: 340px;
@@ -196,9 +197,6 @@ h1{
 }
 .button-book-week a:hover{
     color: #ed4f1a;
-}
-.blok-book-one{
-    height: 800px;
 }
 .book2-week p{
     font-size: 20px;
@@ -444,7 +442,6 @@ h1{
     border-bottom: 1px solid black;
     padding: 3px;
     margin: 5px;
-    color:  #E6E9E6;
     font-style: italic;
     font-family: 'Noticia Text', serif;
     font-size: 16px;
@@ -462,12 +459,21 @@ h1{
     border-bottom: 1px solid black;
     padding: 3px;
     margin: 5px;
-    color:  #E6E9E6;
     font-style: italic;
     font-family: 'Noticia Text', serif;
     font-size: 16px;
 }
 .coment:hover{
+    border-bottom: 3px solid black;
+}
+.coment:focus{
+    border: none;
+    outline:none;
+    border-bottom: 3px solid black;
+}
+.chek-in:focus{
+    border: none;
+    outline:none;
     border-bottom: 3px solid black;
 }
 .coment-bottom{
@@ -477,6 +483,220 @@ h1{
     font-size: 22px;
     font-family: 'Questrial', sans-serif;
     margin-bottom: 100px;
+    margin-left: 42%;
+}
+.alert-success p{
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    color: red;
+    font-size: 20px;
+    margin: 32px;
+}
+/*book*/
+.book-box{
+    width: 70%;
+    margin: 0 auto;
+}
+.way-book{
+    width: 500px;
+    font-size: 17px;
+    font-family: 'Questrial', sans-serif;
+    float: left;
+}
+.name-book-navigation{
+    opacity: 0.5;
+}
+.forward-backwards-book{
+    width: 300px;
+    float: right;
+    text-align: right;
+}
+.forward-backwards-book a{
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 17px;
+    font-family: 'Questrial', sans-serif;
+    padding: 8px;
+    border: 2px solid;
+}
+.forward-backwards-book a:hover{
+    opacity: 0.5;
+}
+.blok-book-img{
+    width: 50%;
+    float: left;
+    height: 800px;
+}
+.blok-book-text{
+    width: 49%;
+    float: left;
+}
+.blok-book-img .img-book{
+    margin: 80px;
+}
+.blok-book-text p{
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+    margin: 25px;
+}
+.blok-book-text h1{
+    font-size: 25px;
+    font-family: 'Questrial', sans-serif;
+    text-align: left;
+    margin: 25px;
+
+}
+.blok-book-text .description-book-text{
+    width: 70%;
+    margin: 25px;
+}
+.blok-book-text a{
+    width: 65%;
+    border: solid 2px #1A1A1A;
+    display: inline-block;
+    margin: 25px;
+    padding: 15px;
+    font-size: 22px;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #ed4f1a;
+}
+.blok-book-text a:hover{
+    opacity: 0.5;
+}
+/*reservation*/
+.content-reservation{
+    width: 70%;
+    margin: 0 auto;
+}
+.container-customer {
+    width: 50%;
+    margin: 0 auto;
+}
+.content-reservation .chek-in{
+    width: 43%;
+}
+.content-reservation .container-customer .chek-in{
+    width: 100%;
+}
+.content-reservation .chek-in{
+    margin: 30px;
+}
+.name-reservation{
+    font-size: 22px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+    text-align: center;
+}
+.content-reservation .coment-bottom{
+    margin-bottom: 80px;
+    margin-left: 42%;
+}
+/*books*/
+.panel-group{
+    width: 25%;
+    float: left;
+}
+
+.panel-heading .panel-title a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}
+.panel-heading .panel-title {
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #1A1A1A;
+    margin: 0;
+    background-color: #E6E9E6;
+}
+.panel-heading .panel-title:hover{
+    opacity: 0.5;
+}
+.panel-ganre{
+    list-style-type: none;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #1A1A1A;
+}
+.panel-ganre:hover{
+    opacity: 0.5;
+}
+.panel-ganre a{
+    text-decoration: none;
+
+    font-size: 15px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+}
+.panel-body ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.box-books{
+    width: 90%;
+    margin: 0 auto;
+}
+.box-books .name-about{
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.box-books .container-customer {
+    width: 70%;
+    float: left;
+}
+.box-books .chek-in{
+    width: 25%;
+
+}
+.box-books .img-book{
+    width: 180px;
+    height: 260px;
+}
+.one-book-books{
+    width: 170px;
+    float: left;
+    margin: 40px;
+}
+.box-books .button-book-week a{
+    font-size: 18px;
+}
+.blok-books-three{
+    width: 73%;
+    float: right;
+    margin-top: 50px;
+}
+.name-book{
+    height: 75px;
+}
+.pagination{
+    width: 50%;
+    margin-left: 46%;
+}
+.name-book a {
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    color: #1A1A1A;
+    text-align: center;
+}
+.name-book a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+.pagination .page-item.active .page-link{
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+}
+.pagination .page-item.active .page-link{
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+}
+.page-item .page-link{
+    color: #1A1A1A;
 }
 /*footer*/
 .box1-footer{

@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
+use App\Mail\CommentReceived;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class PageController extends Controller
 {
     public function index()
     {
+        $books = Book::latest()->limit(3)->get();
 
-        return view('index');
+        return view('index', compact('books'));
     }
 
     public function about()
@@ -30,9 +35,13 @@ class PageController extends Controller
         return view('events');
     }
 
-    public function bookings()
-    {
+    public function sendMessage(Request $request) {
+        $message = $request->except(['_token']);
 
-        return view('bookings');
+        Mail::to(['address' => 'admin@library.com'])->send(new CommentReceived($message));
+
+        Session::flash('message', 'Ваша заявка принята');
+
+        return redirect()->route('front.contacts');
     }
 }

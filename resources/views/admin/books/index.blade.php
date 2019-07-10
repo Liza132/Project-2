@@ -14,11 +14,11 @@
         @foreach($books as $book)
             <tr>
                 <th scope="row">{{ $book->id }}</th>
-                <td>{{ $book->name }} {{ $book->surname }}</td>
+                <td>{{ $book->name }}</td>
                 <td><img class="photo" src="{{ $book->getFirstMediaUrl('images', 'thumb') }}"></td>
             </tr>
         @endforeach
         </tbody>
     </table>
-
+    {{ $books->links() }}
 @endsection

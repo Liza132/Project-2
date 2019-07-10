@@ -58,7 +58,11 @@
 </head>
 <body>
 <nav class="navbar navbar-dark  bg-dark flex-md-nowrap p-0 shadow mb-3">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Библиотека им.Локова</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Библиотека им.Локава</a>
+    <form action="/logout" method="post">
+        {{ csrf_field() }}
+        <button class="btn">Logout</button>
+    </form>
 </nav>
 
 <div class="container-fluid">
@@ -74,6 +78,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('genres.create') }}">Создать жанр</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('books.index') }}">Книга лист</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('books.create') }}">Создать книгу</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('reservations.index') }}">Reservations</a></li>
                 </ul>
             </div>
         </nav>

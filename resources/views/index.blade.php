@@ -20,44 +20,28 @@
         <div class="conteiner-week">
             <h2 class="name-week">Подборка книг этой недели</h2>
             <div class="blok-book-two">
+                @foreach($books as $book)
+                @if ($loop->first || $loop->last)
                 <div class="book1-week">
-                    <div class="box-book-week">
-                        <img class="img-book" src="img/01.jpg" alt="book">
-                        <h3 class="name-book">Невеста Демона</h3>
-                        <hr class="line-book-name">
-                        <div class="button-book-week">
-                            <a href="#">Забронировать</a>
-                        </div>
-                    </div>
-                </div>
+                @else
                 <div class="book2-week">
+                @endif
                     <div class="box-book-week">
-                        <img class="img-book" src="img/2.jpg" alt="book">
-                        <h3 class="name-book">Астровитянка</h3>
+                        <a href="{{ route('front.book', ['id' => $book->id]) }}"><img class="img-book" src="{{ $book->getFirstMediaUrl('images') }}" alt="{{ $book->name }}"></a>
+                        <h3 class="name-book"><a href="{{ route('front.book', ['id' => $book->id]) }}">{{ $book->name }}</a></h3>
                         <hr class="line-book-name">
                         <div class="button-book-week">
-                            <a href="#">Забронировать</a>
+                            <a href="{{ route('front.booking', ['id' => $book->id]) }}">Забронировать</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="blok-book-one">
-                <div class="book1-week">
-                    <div class="box-book-week">
-                        <img class="img-book" src="img/3.jpg" alt="book">
-                        <h3 class="name-book">Гостья</h3>
-                        <hr class="line-book-name">
-                        <div class="button-book-week">
-                            <a href="#">Забронировать</a>
-                        </div>
-                    </div>
-                </div>
+
+                @if ($loop->last)
                 <div class="book2-week">
-                    <p>"Земля – в опасности! Наше место скоро займут Души – лишенные плотской оболочки пришельцы,
-                        вытесняющие из человеческих тел разум и замещающие его разумом собственным. Большая часть
-                        человечества уже погибла."</p>
-                    <a class="link-book-more">Подробние...</a>
+                    <p>{{ $book->description }}</p>
                 </div>
+                @endif
+                @endforeach
             </div>
         </div>
         <div class="conteiner-regulations">

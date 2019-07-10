@@ -30,7 +30,7 @@
             <label class="input-group-text mt-3" for="inputGroupSelect01">Автор</label>
             <select name="author_id" class="custom-select col-md-4 mt-3" id="inputGroupSelect01">
                 @foreach($authors as $author)
-                    <option value="{{ $author->id }}">{{ $author->name }}</option>
+                    <option value="{{ $author->id }}">{{ $author->surname }}</option>
                 @endforeach
             </select>
         </div>

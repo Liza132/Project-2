@@ -19,7 +19,7 @@
                 @if($genre->children)
                     <ul>
                     @foreach($genre->children as $subGenre)
-                        <li>- {{ $subGenre->name }}</li>
+                        <li>{{ $subGenre->name }}</li>
                     @endforeach
                     </ul>
                 @endif
